@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
-import AnimatedBackground from './AnimatedBackground';
+import AnimatedBgHero from './AnimatedBgHero';
 
 const Hero = () => {
   return (
     <section className="hero-section">
-      <AnimatedBackground />
+      <AnimatedBgHero />
       <div className="hero-overlay"></div>
       
       <div className="hero-content container">
@@ -18,7 +18,7 @@ const Hero = () => {
         </div>
         
         <h1 className="hero-headline animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          Data-Driven Strategy as <br /> <span className="text-gradient">High-Impact Infrastructure</span>
+          Raise the Experience, <br /> <span className="text-gradient">Elevate the Brand</span>
         </h1>
         
         <div className="hero-sub animate-fade-in-up" style={{ animationDelay: '0.2s' }}>

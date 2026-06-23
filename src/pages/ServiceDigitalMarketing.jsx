@@ -76,6 +76,47 @@ const ServiceDigitalMarketing = () => {
             <img src={heroBg} alt="Digital Marketing" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           </motion.div>
         </motion.div>
+
+        {/* Our Marketing Stack */}
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h2 className="section-title">Our Marketing <span className="text-gradient">Stack</span></h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
+            We leverage enterprise-grade tools and platforms to ensure your campaigns are running at peak performance, around the clock.
+          </p>
+        </div>
+        <motion.div 
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '25px', marginBottom: '100px' }}
+        >
+          {[
+            { title: 'Google Ads & Analytics', desc: 'Precision-targeted search and display campaigns with real-time conversion tracking and attribution modeling.' },
+            { title: 'Meta Business Suite', desc: 'Advanced audience segmentation and retargeting across Facebook and Instagram for maximum social ROI.' },
+            { title: 'SEMrush & Ahrefs', desc: 'Deep keyword research, competitor analysis, and backlink strategies to dominate organic search rankings.' },
+            { title: 'HubSpot & Klaviyo', desc: 'Automated email sequences, lead scoring, and CRM integration for seamless sales pipeline management.' }
+          ].map((item, idx) => (
+            <motion.div key={idx} variants={fadeInUp} className="glass" style={{ padding: '35px', borderRadius: '16px', borderTop: '3px solid var(--accent-gold)' }}>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'var(--text-primary)' }}>{item.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>{item.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Performance Metrics */}
+        <motion.div 
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
+          style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '40px', textAlign: 'center', marginBottom: '60px' }}
+        >
+          {[
+            { value: '$15M+', label: 'Ad Spend Managed' },
+            { value: '340%', label: 'Avg. Traffic Growth' },
+            { value: '4.8x', label: 'Average ROAS' }
+          ].map((stat, idx) => (
+            <motion.div key={idx} variants={fadeInUp}>
+              <h2 style={{ fontSize: '3.5rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-display)' }}>{stat.value}</h2>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
         
       </div>
     </motion.div>

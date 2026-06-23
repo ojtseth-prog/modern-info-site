@@ -76,6 +76,47 @@ const ServiceBrandIdentity = () => {
             </motion.div>
           </div>
         </motion.div>
+
+        {/* What You'll Receive */}
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h2 className="section-title">What You'll <span className="text-gradient">Receive</span></h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
+            Every brand identity package is tailored to your unique vision. Here's what a typical engagement includes.
+          </p>
+        </div>
+        <motion.div 
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '25px', marginBottom: '100px' }}
+        >
+          {[
+            { title: 'Custom Logo Suite', desc: 'Primary, secondary, and icon variations optimized for print, digital, and social media.' },
+            { title: 'Brand Guidelines', desc: 'A comprehensive style manual covering typography, color systems, imagery direction, and voice.' },
+            { title: 'Stationery Design', desc: 'Business cards, letterheads, and envelope designs that exude sophistication.' },
+            { title: 'Social Media Kit', desc: 'Branded templates for Instagram, LinkedIn, and Facebook to ensure visual consistency.' }
+          ].map((item, idx) => (
+            <motion.div key={idx} variants={fadeInUp} className="glass" style={{ padding: '35px', borderRadius: '16px', borderTop: '3px solid var(--accent-gold)' }}>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '12px', color: 'var(--text-primary)' }}>{item.title}</h3>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>{item.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Results Stats */}
+        <motion.div 
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
+          style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '40px', textAlign: 'center', marginBottom: '60px' }}
+        >
+          {[
+            { value: '95%', label: 'Client Retention Rate' },
+            { value: '2x', label: 'Brand Recognition Lift' },
+            { value: '60+', label: 'Brands Launched' }
+          ].map((stat, idx) => (
+            <motion.div key={idx} variants={fadeInUp}>
+              <h2 style={{ fontSize: '3.5rem', color: 'var(--accent-gold)', fontFamily: 'var(--font-display)' }}>{stat.value}</h2>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
         
       </div>
     </motion.div>
