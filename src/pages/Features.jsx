@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Features from '../components/Features';
-import { pageVariants, pageTransition } from './Home';
+import { pageVariants, pageTransition, staggerContainer, fadeInUp } from './Home';
 import ctaBgImg from '../assets/cta_bg.png';
 import AnimatedBgOrbs from '../components/AnimatedBgOrbs';
 
@@ -33,8 +33,8 @@ const FeaturesPage = () => {
         <Features />
         
         {/* Extended details for Features Page */}
-        <div className="container" style={{ marginTop: '120px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '60px', alignItems: 'center' }}>
+        <motion.div className="container" style={{ marginTop: '120px' }} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
+          <motion.div variants={fadeInUp} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '60px', alignItems: 'center' }}>
             <div className="picture-box" style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.5)', border: '1px solid rgba(212,175,55,0.2)' }}>
               <img src={ctaBgImg} alt="Deep Analytics" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
@@ -47,15 +47,15 @@ const FeaturesPage = () => {
               </p>
               <a href="/contact" className="btn btn-primary" style={{ padding: '12px 30px' }}>Request a Demo</a>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* How We Deliver Results */}
-        <div className="container" style={{ marginTop: '120px' }}>
-          <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>
+        <motion.div className="container" style={{ marginTop: '120px' }} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
+          <motion.h2 variants={fadeInUp} className="section-title" style={{ textAlign: 'center', marginBottom: '60px' }}>
             How We Deliver <span className="text-gradient">Results</span>
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
+          </motion.h2>
+          <motion.div variants={fadeInUp} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
             {[
               { step: '01', title: 'Research & Audit', desc: 'We start by conducting a comprehensive audit of your current digital presence, identifying gaps and untapped opportunities across all channels.' },
               { step: '02', title: 'Strategic Blueprint', desc: 'Our strategists develop a custom roadmap built around your KPIs, competitive landscape, and target demographics.' },
@@ -68,11 +68,11 @@ const FeaturesPage = () => {
                 <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>{item.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Client Testimonial */}
-        <div className="container" style={{ marginTop: '120px', marginBottom: '80px' }}>
+        <motion.div className="container" style={{ marginTop: '120px', marginBottom: '80px' }} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
           <div className="glass" style={{ padding: '60px', borderRadius: '24px', textAlign: 'center', borderTop: '4px solid var(--accent-gold)' }}>
             <svg viewBox="0 0 24 24" fill="var(--accent-gold)" style={{ width: '40px', height: '40px', marginBottom: '20px', opacity: 0.5 }}>
               <path d="M11 7.5a4.5 4.5 0 1 0-9 0c0 2 1 3.5 2 4.5L2 17h7l-1-3c1.5-1 3-3 3-6.5zM22 7.5a4.5 4.5 0 1 0-9 0c0 2 1 3.5 2 4.5l-2 5h7l-1-3c1.5-1 3-3 3-6.5z"/>
@@ -83,7 +83,7 @@ const FeaturesPage = () => {
             <p style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', fontWeight: '600' }}>— Alexandra Chen</p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>CEO, Lumière Cosmetics</p>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </motion.div>

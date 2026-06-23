@@ -20,17 +20,17 @@ const Contact = () => {
             <p style={{ fontSize: '1.2rem', marginBottom: '40px', color: 'var(--text-secondary)' }}>
               Ready to elevate your brand? Drop us a line and let's start crafting your success story.
             </p>
-            
+
             <div style={{ marginBottom: '30px' }}>
               <h4 style={{ color: 'var(--accent-gold)' }}>Email</h4>
               <p>hello@sipandstrategy.com</p>
             </div>
             <div style={{ marginBottom: '30px' }}>
               <h4 style={{ color: 'var(--accent-gold)' }}>Office</h4>
-              <p>123 Strategy Blvd, Suite 400<br/>New York, NY 10001</p>
+              <p>123 Strategy Blvd, Suite 400<br />New York, NY 10001</p>
             </div>
           </div>
-          
+
           <div style={{ flex: '1 1 400px' }}>
             <form className="glass" style={{ padding: '40px', borderRadius: '24px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div>
