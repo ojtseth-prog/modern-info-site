@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { pageVariants, pageTransition } from './Home';
-import AnimatedBackground from '../components/AnimatedBackground';
+import AnimatedBgServices from '../components/AnimatedBgServices';
 
 import heroBg from '../assets/hero_bg.png';
 import ctaBgImg from '../assets/cta_bg.png';
@@ -34,7 +34,7 @@ const ServicesHub = () => {
       transition={pageTransition}
     >
       <div style={{ position: 'relative', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingTop: '80px', overflow: 'hidden' }}>
-        <AnimatedBackground />
+        <AnimatedBgServices />
         <div className="hero-overlay"></div>
         <motion.div 
           initial="hidden" animate="visible" variants={fadeInUp}
