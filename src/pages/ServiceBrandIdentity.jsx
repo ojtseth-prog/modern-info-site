@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { pageVariants, pageTransition } from './Home';
 import { Link } from 'react-router-dom';
 import ctaBgImg from '../assets/cta_bg.png';
-import AnimatedBackground from '../components/AnimatedBackground';
+import AnimatedBgBrand from '../components/AnimatedBgBrand';
 
 // Scroll animation variants
 const fadeInUp = {
@@ -31,7 +31,7 @@ const ServiceBrandIdentity = () => {
       transition={pageTransition}
     >
       <div style={{ position: 'relative', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingTop: '80px', overflow: 'hidden' }}>
-        <AnimatedBackground />
+        <AnimatedBgBrand />
         <div className="hero-overlay"></div>
         <motion.div 
           initial="hidden" animate="visible" variants={fadeInUp}

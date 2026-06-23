@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { pageVariants, pageTransition } from './Home';
 import { Link } from 'react-router-dom';
 import whoWeAreImg from '../assets/who_we_are.png';
-import AnimatedBackground from '../components/AnimatedBackground';
+import AnimatedBgWeb from '../components/AnimatedBgWeb';
 
 // Scroll animation variants
 const fadeInUp = {
@@ -31,7 +31,7 @@ const ServiceWebDesign = () => {
       transition={pageTransition}
     >
       <div style={{ position: 'relative', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingTop: '80px', overflow: 'hidden' }}>
-        <AnimatedBackground />
+        <AnimatedBgWeb />
         <div className="hero-overlay"></div>
         <motion.div 
           initial="hidden" animate="visible" variants={fadeInUp}

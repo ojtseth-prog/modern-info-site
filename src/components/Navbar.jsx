@@ -27,7 +27,7 @@ const Navbar = () => {
             <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
             
             {/* Services Dropdown */}
-            <div className="nav-item-dropdown">
+            <div className="nav-item dropdown">
               <Link to="/services" className={`nav-link ${location.pathname.includes('/services') ? 'active' : ''}`}>Services</Link>
               <div className="dropdown-menu glass">
                 <Link to="/services/brand-identity" className="dropdown-item">Brand Identity</Link>
